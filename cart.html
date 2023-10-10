@@ -22,6 +22,13 @@
     <link id="pagestyle" href="./assets/css/mainpro.css" rel="stylesheet" />
 </head>
 
+<style>
+    .choices[data-type*=select-one] .choices__input{
+        background-color: rgba(216, 215, 212, 0.308);
+        border-radius: 10px;
+    }
+</style>
+
 <body class="g-sidenav-show   bg-gray-100">
     <div class="min-height-300 bg-primary position-absolute w-100"></div>
     <aside
@@ -93,13 +100,13 @@
                         </div>
                         <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
-                              <div class="sidenav-toggler-inner">
-                                <i class="sidenav-toggler-line bg-white"></i>
-                                <i class="sidenav-toggler-line bg-white"></i>
-                                <i class="sidenav-toggler-line bg-white"></i>
-                              </div>
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line bg-white"></i>
+                                    <i class="sidenav-toggler-line bg-white"></i>
+                                    <i class="sidenav-toggler-line bg-white"></i>
+                                </div>
                             </a>
-                          </li>
+                        </li>
                         <li class="nav-item px-3 d-flex align-items-center">
                             <a href="javascript:;" class="nav-link text-white p-0">
                                 <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
@@ -200,196 +207,384 @@
         <!-- End Navbar -->
         <div class="container-fluid py-4">
             <div class="row px-2">
-                <div class="col-lg-6">
-                    <label class="mt-4 text-white">Select Customers</label>
-                    <select class="form-control" name="choices-category" id="choices-category-edit">
-                        <option value="Choice 1" selected>Select Customers</option>
-                        <option value="Choice 2">1</option>
-                        <option value="Choice 3">2</option>
-                        <option value="Choice 4">3</option>
-                        <option value="Choice 5">4</option>
-                    </select>
-                </div>
-                <div class="col-lg-6 text-right d-flex flex-column justify-content-center mb-lg-0 mb-5">
-                    <button type="button" class="btn bg-gradient-dark mb-n5 text-xs float-end" data-bs-toggle="modal"
-                        data-bs-target="#modal-add-customer">Add New Customer</button>
+                <div class="col-md-8 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                            
+                                <div class="col-12 ">
+                                    <label class=" text-dark">Select Customers</label>
+                                    <select class="form-control" name="choices-category" id="choices-category-edit">
+                                        <option value="Choice 1" selected>Select Customers</option>
+                                        <option value="Choice 2">1</option>
+                                        <option value="Choice 3">2</option>
+                                        <option value="Choice 4">3</option>
+                                        <option value="Choice 5">4</option>
+                                    </select>
+                                    <button type="button" class="btn bg-gradient-dark  mb-1 text-xs float-end"
+                                        data-bs-toggle="modal" data-bs-target="#modal-add-customer">Add New
+                                        Customer</button>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="modal-add-customer" tabindex="-1" role="dialog"
-                        aria-labelledby="modal-add-customer" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-                            <div class="modal-content">
-                                <form>
-                                    <div class="modal-body p-0">
-                                        <div class="card card-plain">
-                                            <div class="card-header pb-0 text-left">
-                                                <h3 class="font-weight-bolder text-dark text-gradient">Add New Customer
-                                                </h3>
-                                                <p class="mb-0">Enter your Customer Details</p>
-                                            </div>
-                                            <div class="card-body">
-                                                <label>Name</label>
-                                                <div class="input-group mb-3">
-                                                    <input type="text" class="form-control" placeholder="Name">
-                                                </div>
-                                                <label>Phone Number</label>
-                                                <div class="input-group mb-3">
-                                                    <input type="number" class="form-control"
-                                                        placeholder="+91 00000 00000">
-                                                </div>
-                                                <label>Email</label>
-                                                <div class="input-group mb-3">
-                                                    <input type="email" class="form-control" placeholder="@gmail.com">
-                                                </div>
-                                                <label>Address</label>
-                                                <div class="input-group mb-3">
-                                                    <input type="text" class="form-control" placeholder="Address">
-                                                </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="modal-add-customer" tabindex="-1" role="dialog"
+                                        aria-labelledby="modal-add-customer" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+                                            <div class="modal-content">
+                                                <form>
+                                                    <div class="modal-body p-0">
+                                                        <div class="card card-plain">
+                                                            <div class="card-header pb-0 text-left">
+                                                                <h3 class="font-weight-bolder text-dark text-gradient">
+                                                                    Add New
+                                                                    Customer
+                                                                </h3>
+                                                                <p class="mb-0">Enter your Customer Details</p>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <label>Name</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Name">
+                                                                </div>
+                                                                <label>Phone Number</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="number" class="form-control"
+                                                                        placeholder="+91 00000 00000">
+                                                                </div>
+                                                                <label>Email</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="email" class="form-control"
+                                                                        placeholder="@gmail.com">
+                                                                </div>
+                                                                <label>Address</label>
+                                                                <div class="input-group mb-3">
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Address">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn bg-gradient-secondary"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn bg-gradient-primary">Add New
+                                                            Customer
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn bg-gradient-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn bg-gradient-primary">Add New Customer </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal -->
-
-                </div>
-                <div class="mt-4">
-                    <div class="card p-3">
-                        <h4 class="text-dark">Customers Name</h4>
-                        <div class="row mt-2">
-                            <p class="col-12 col-md-6 text-dark opacity-8">Customers phone number</p>
-                            <p class="col-12 col-md-6 text-dark opacity-8">Customers Email</p>
-                            <p class="col-12 col-md-6 text-dark opacity-8">Address</p>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class=" ">Product 1</h5>
-                            <div class="row">
-                                <div class="col-12">
-                                    <img class="w-100 border-radius-lg shadow-lg mt-3" src="assets/img/product-page.jpg"
-                                        alt="product_image">
+                                    <!-- Modal -->
                                 </div>
-                                <div class="col-12 mt-4 mb-0">
-                                    <div class="d-flex">
-                                        <a href="product.html"><button class="btn btn-primary btn-sm mb-0 me-2"
-                                                type="button" name="button">Edit</button></a>
-                                        <button class="btn btn-outline-dark btn-sm mb-0" type="button"
-                                            name="button">Remove</button>
+
+                                <div class="col-12 ">
+                                    <div class="mt-4">
+                                        <h4 class="text-dark font-weight-bold">Customers Name</h4>
+                                        <div class="  mt-3">
+                                            <p class=" text-dark opacity-8">Customers phone number</p>
+                                            <p class=" text-dark opacity-8">Customers Email</p>
+                                            <p class=" text-dark opacity-8">Address</p>
+
+                                        </div>
+
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 mt-lg-0 mt-4">
+
+                <div class="col-md-4 col-12 mt-4 mt-md-0">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class=" ">Product Order Information</h5>
-                            <div class="row">
-                                <div class="col-12 col-sm-6">
-                                    <label>Name</label>
-                                    <h4 class="font-weight-bolder">Product Name</h4>
+                            <h5 class="">PRICE DETAILS  </h5>
+                            <hr class="horizontal dark ">
+                            <div class=" mt-3">
+                                <p class=" text-dark opacity-8">Total Products <span class="h5 float-end" >20</span></p>
+                                <p class=" text-dark opacity-8">Total Amount <span class="h5 float-end" >2050 &#8377;</span></p> 
+                                <div class="form-group">
+                                    <label  >Advance Amount</label>
+                                    <input type="number" class="form-control"  placeholder="1000 &#8377;">
                                 </div>
-                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                    <label>Order type</label>
-                                    <h4 class="font-weight-bolder">Per Day Or Per Hour</h4>
+                                <div class="row"> 
+                                    <p class="col-8 h6 font-weight-bold opacity-8 ">Balance Amount  </p> 
+                                    <p class="col-4 h5 font-weight-bolder d-flex justify-content-end" >1050 &#8377; </p> 
                                 </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-12 col-sm-6">
-                                    <label>From Date&Time</label>
-                                    <h4 class="font-weight-bolder">Date&Time</h4>
-                                </div>
-                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                    <label>To Date&Time</label>
-                                    <h4 class="font-weight-bolder">Date&Time</h4>
+
+                                <div class="d-flex justify-content-center text-center"> 
+                                    <a href="dashboard.html"><button class="mb-0 mt-3 btn btn-lg bg-gradient-success "
+                                        type="button" title="submit">Buy</button></a>
                                 </div>
                             </div>
-                            <div class="row mt-4">
-                                <div class="col-12 col-sm-6">
-                                    <label>Number Of Products</label>
-                                    <h4 class="font-weight-bolder">10</h4>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class=" ">Product 2</h5>
-                            <div class="row">
-                                <div class="col-12">
-                                    <img class="w-100 border-radius-lg shadow-lg mt-3" src="assets/img/product-page.jpg"
-                                        alt="product_image">
-                                </div>
-                                <div class="col-12 mt-4 mb-0">
-                                    <div class="d-flex">
-                                        <a href="product.html"><button class="btn btn-primary btn-sm mb-0 me-2"
-                                                type="button" name="button">Edit</button></a>
 
-                                        <button class="btn btn-outline-dark btn-sm mb-0" type="button"
-                                            name="button">Remove</button>
+            </div>
+            <div class="card mt-4">
+                <h5 class="p-3">Product Order Information</h5>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class=" ">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img class="w-100 border-radius-lg shadow-lg mt-3"
+                                            src="assets/img/product-page.jpg" alt="product_image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 mt-lg-0 mt-4">
+                            <div class="  mb-4">
+                                <div class="card-body px-0 pt-0 pb-2">
+                                    <div class="table-responsive p-0">
+                                        <table class="table align-items-center mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th
+                                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Product name </th>
+                                                    <th
+                                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                        Order type </th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        From Date&Time </th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        To Date&Time </th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Number Of Products</th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Total Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex px-2 py-1">
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <h6 class="mb-0 text-sm">Product name</h6>
+                                                                <p class="text-xs text-secondary mb-0">Product id number
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-xs font-weight-bold mb-0">Per Day Or Per Hour</p>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <span
+                                                            class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <span
+                                                            class="text-secondary text-xs font-weight-bold">23/05/18</span>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <p class="text-xs font-weight-bold mb-0">2</p>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <p class="text-xs font-weight-bold mb-0">2000</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="mt-n4 d-flex">
+                        <div class="ms-auto">
+                            <a href="product.html"><button class="btn btn-primary btn-sm mb-0 me-2" type="button"
+                                    name="button">Edit</button></a>
+
+                            <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+                        </div>
+                    </div>
+                    <hr class="horizontal dark mt-5">
                 </div>
-                <div class="col-lg-8 mt-lg-0 mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class=" ">Product Order Information</h5>
-                            <div class="row">
-                                <div class="col-12 col-sm-6">
-                                    <label>Name</label>
-                                    <h4 class="font-weight-bolder">Product Name</h4>
-                                </div>
-                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                    <label>Order type</label>
-                                    <h4 class="font-weight-bolder">Per Day Or Per Hour</h4>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class=" ">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img class="w-100 border-radius-lg shadow-lg mt-3"
+                                            src="assets/img/product-page.jpg" alt="product_image">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row mt-4">
-                                <div class="col-12 col-sm-6">
-                                    <label>From Date&Time</label>
-                                    <h4 class="font-weight-bolder">Date&Time</h4>
-                                </div>
-                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                    <label>To Date&Time</label>
-                                    <h4 class="font-weight-bolder">Date&Time</h4>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-12 col-sm-6">
-                                    <label>Number Of Products</label>
-                                    <h4 class="font-weight-bolder">10</h4>
+                        </div>
+                        <div class="col-lg-10 mt-lg-0 mt-4">
+                            <div class="  mb-4">
+                                <div class="card-body px-0 pt-0 pb-2">
+                                    <div class="table-responsive p-0">
+                                        <table class="table align-items-center mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th
+                                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Product name </th>
+                                                    <th
+                                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                        Order type </th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        From Date&Time </th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        To Date&Time </th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Number Of Products</th>
+                                                        <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Total Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex px-2 py-1">
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <h6 class="mb-0 text-sm">Product name</h6>
+                                                                <p class="text-xs text-secondary mb-0">Product id number
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-xs font-weight-bold mb-0">Per Day Or Per Hour</p>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <span
+                                                            class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <span
+                                                            class="text-secondary text-xs font-weight-bold">23/05/18</span>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <p class="text-xs font-weight-bold mb-0">2</p>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <p class="text-xs font-weight-bold mb-0">2000</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="mt-n4 d-flex">
+                        <div class="ms-auto">
+                            <a href="product.html"><button class="btn btn-primary btn-sm mb-0 me-2" type="button"
+                                    name="button">Edit</button></a>
+
+                            <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+                        </div>
+                    </div>
+                    <hr class="horizontal dark mt-5">
                 </div>
-            </div>
-            <div class="button-row d-flex mt-4">
-                <a href="dashboard.html" class="ms-auto mb-0"><button class="px-7 btn btn-lg bg-gradient-success "
-                        type="button" title="submit">Submit</button></a>
-            </div>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <div class=" ">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img class="w-100 border-radius-lg shadow-lg mt-3"
+                                            src="assets/img/product-page.jpg" alt="product_image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 mt-lg-0 mt-4">
+                            <div class="  mb-4">
+                                <div class="card-body px-0 pt-0 pb-2">
+                                    <div class="table-responsive p-0">
+                                        <table class="table align-items-center mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th
+                                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Product name </th>
+                                                    <th
+                                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                        Order type </th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        From Date&Time </th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        To Date&Time </th>
+                                                    <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Number Of Products</th>
+                                                        <th
+                                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                        Total Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex px-2 py-1">
+                                                            <div class="d-flex flex-column justify-content-center">
+                                                                <h6 class="mb-0 text-sm">Product name</h6>
+                                                                <p class="text-xs text-secondary mb-0">Product id number
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="text-xs font-weight-bold mb-0">Per Day Or Per Hour</p>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <span
+                                                            class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <span
+                                                            class="text-secondary text-xs font-weight-bold">23/05/18</span>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <p class="text-xs font-weight-bold mb-0">2</p>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <p class="text-xs font-weight-bold mb-0">2000</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-n4 d-flex">
+                        <div class="ms-auto">
+                            <a href="product.html"><button class="btn btn-primary btn-sm mb-0 me-2" type="button"
+                                    name="button">Edit</button></a>
+
+                            <button class="btn btn-outline-dark btn-sm mb-0" type="button" name="button">Remove</button>
+                        </div>
+                    </div>
+                    <hr class="horizontal dark mt-5">
+                </div>
+            </div> 
         </div>
     </main>
     <!--   Core JS Files   -->
@@ -414,7 +609,7 @@
         if (document.getElementById('choices-category-edit')) {
             var element = document.getElementById('choices-category-edit');
             const example = new Choices(element, {
-                searchEnabled: false
+                searchEnabled: true
             });
         };
     </script>
