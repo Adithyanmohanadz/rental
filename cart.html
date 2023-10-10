@@ -19,7 +19,7 @@
 
     <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
-    <link id="pagestyle" href="./assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+    <link id="pagestyle" href="./assets/css/mainpro.css" rel="stylesheet" />
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -190,97 +190,196 @@
         </nav>
         <!-- End Navbar -->
         <div class="container-fluid py-4">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
+            <div class="row px-2">
+                <div class="col-lg-6">
+                    <label class="mt-4 text-white">Select Customers</label>
+                    <select class="form-control" name="choices-category" id="choices-category-edit">
+                        <option value="Choice 1" selected>Select Customers</option>
+                        <option value="Choice 2">1</option>
+                        <option value="Choice 3">2</option>
+                        <option value="Choice 4">3</option>
+                        <option value="Choice 5">4</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 text-right d-flex flex-column justify-content-center mb-lg-0 mb-5">
+                    <button type="button" class="btn bg-gradient-dark mb-n5 text-xs float-end" data-bs-toggle="modal"
+                        data-bs-target="#modal-add-customer">Add New Customer</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-add-customer" tabindex="-1" role="dialog"
+                        aria-labelledby="modal-add-customer" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+                            <div class="modal-content">
+                                <form>
+                                    <div class="modal-body p-0">
+                                        <div class="card card-plain">
+                                            <div class="card-header pb-0 text-left">
+                                                <h3 class="font-weight-bolder text-dark text-gradient">Add New Customer
+                                                </h3>
+                                                <p class="mb-0">Enter your Customer Details</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <label>Name</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" placeholder="Name">
+                                                </div>
+                                                <label>Phone Number</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="number" class="form-control"
+                                                        placeholder="+91 00000 00000">
+                                                </div>
+                                                <label>Email</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="email" class="form-control" placeholder="@gmail.com">
+                                                </div>
+                                                <label>Address</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" placeholder="Address">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn bg-gradient-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn bg-gradient-primary">Add New Customer </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+
+                </div>
+                <div class="mt-4">
+                    <div class="card p-3">
+                        <h4 class="text-dark">Customers Name</h4>
+                        <div class="row mt-2">
+                            <p class="col-12 col-md-6 text-dark opacity-8">Customers phone number</p>
+                            <p class="col-12 col-md-6 text-dark opacity-8">Customers Email</p>
+                            <p class="col-12 col-md-6 text-dark opacity-8">Address</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="mb-4">Product Details</h5>
+                            <h5 class=" ">Product 1</h5>
                             <div class="row">
-                                <div class="col-xl-5 col-lg-6 text-center">
-                                    <img class="w-100 border-radius-lg shadow-lg mx-auto"
-                                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/product-thumb.jpg"
-                                        alt="chair">
-                                    <div class="text-start mt-4">
-                                        <label class="ms-4">Description</label>
-                                        <ul>
-                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem
-                                                magni earum assumenda molestiae . Itaque, impedit!</li>
-                                            <li>Facere, quae ab voluptate aut voluptas, accusantium. Itaque, impedit!
-                                            </li>
-                                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                                        </ul>
-                                    </div>
-
+                                <div class="col-12">
+                                    <img class="w-100 border-radius-lg shadow-lg mt-3" src="assets/img/product-page.jpg"
+                                        alt="product_image">
                                 </div>
-                                <div class="col-lg-5 mx-auto">
-                                    <h3 class="mt-lg-0 mt-4">Product Name</h3>
-                                    <h6 class="mb-0 mt-3">Price in Per Day</h6>
-                                    <h5>150 &#8377;</h5>
-                                    <h6 class="mb-0 mt-3">Price in Per Hour</h6>
-                                    <h5>50 &#8377;</h5>
-                                    <span class="h6 text-dark">Stock <span class="h5 text-primary">20</span></span>
-                                    <br>
-                                    <!-- <label class="mt-4">Description</label>
-                                    <ul>
-                                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem magni earum assumenda molestiae . Itaque, impedit!</li>
-                                        <li>Facere, quae ab voluptate aut voluptas, accusantium. Itaque, impedit!</li>
-                                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                                        </ul> -->
-                                    <div class="row mt-4">
-                                        <div class="col-12 mt-lg-0 mt-2 d-flex">
-                                            <div class="form-check me-3">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="customRadio1">
-                                                <label class="custom-control-label" for="customRadio1">Per Day</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="customRadio2">
-                                                <label class="custom-control-label" for="customRadio2">Per Hour</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 ">
-                                            <div class="form-group">
-                                                <label for="example-text-input" class="form-control-label">From
-                                                    Date</label>
-                                                <input class="form-control" type="datetime-local"
-                                                    value="2018-11-23T10:30:00">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="example-text-input" class="form-control-label">To
-                                                    Date</label>
-                                                <input class="form-control" type="datetime-local"
-                                                    value="2018-11-23T10:30:00">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 ">
-                                            <div class="form-group">
-                                                <label for="example-text-input" class="form-control-label">Number Of
-                                                    Product</label>
-                                                <input class="form-control" type="number"
-                                                    placeholder="Number Of Product">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-lg-5">
-                                            <a href="all_product.html"><button
-                                                    class="btn btn-primary mb-0 mt-lg-auto w-100" type="button"
-                                                    name="button">Add to cart</button></a>
-
-                                        </div>
+                                <div class="col-12 mt-4 mb-0">
+                                    <div class="d-flex">
+                                        <a href="product.html"><button class="btn btn-primary btn-sm mb-0 me-2"
+                                                type="button" name="button">Edit</button></a>
+                                        <button class="btn btn-outline-dark btn-sm mb-0" type="button"
+                                            name="button">Remove</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-8 mt-lg-0 mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class=" ">Product Order Information</h5>
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <label>Name</label>
+                                    <h4 class="font-weight-bolder">Product Name</h4>
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                    <label>Order type</label>
+                                    <h4 class="font-weight-bolder">Per Day Or Per Hour</h4>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 col-sm-6">
+                                    <label>From Date&Time</label>
+                                    <h4 class="font-weight-bolder">Date&Time</h4>
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                    <label>To Date&Time</label>
+                                    <h4 class="font-weight-bolder">Date&Time</h4>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 col-sm-6">
+                                    <label>Number Of Products</label>
+                                    <h4 class="font-weight-bolder">10</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class=" ">Product 2</h5>
+                            <div class="row">
+                                <div class="col-12">
+                                    <img class="w-100 border-radius-lg shadow-lg mt-3" src="assets/img/product-page.jpg"
+                                        alt="product_image">
+                                </div>
+                                <div class="col-12 mt-4 mb-0">
+                                    <div class="d-flex">
+                                        <a href="product.html"><button class="btn btn-primary btn-sm mb-0 me-2"
+                                                type="button" name="button">Edit</button></a>
+
+                                        <button class="btn btn-outline-dark btn-sm mb-0" type="button"
+                                            name="button">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-lg-0 mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class=" ">Product Order Information</h5>
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <label>Name</label>
+                                    <h4 class="font-weight-bolder">Product Name</h4>
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                    <label>Order type</label>
+                                    <h4 class="font-weight-bolder">Per Day Or Per Hour</h4>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 col-sm-6">
+                                    <label>From Date&Time</label>
+                                    <h4 class="font-weight-bolder">Date&Time</h4>
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                    <label>To Date&Time</label>
+                                    <h4 class="font-weight-bolder">Date&Time</h4>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 col-sm-6">
+                                    <label>Number Of Products</label>
+                                    <h4 class="font-weight-bolder">10</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-row d-flex mt-4">
+                <a href="dashboard.html" class="ms-auto mb-0"><button class="px-7 btn btn-lg bg-gradient-success "
+                        type="button" title="submit">Submit</button></a>
             </div>
         </div>
     </main>
@@ -290,6 +389,7 @@
     <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="./assets/js/plugins/flatpickr.min.js"></script>
+    <script src="./assets/js/plugins/choices.min.js"></script>
 
     <script>
         var win = navigator.platform.indexOf('Win') > -1;
@@ -302,16 +402,17 @@
     </script>
     <script>
 
-        if (document.querySelector('.datetimepicker')) {
-            flatpickr('.datetimepicker', {
-                allowInput: true
-            }); // flatpickr
-        }
+        if (document.getElementById('choices-category-edit')) {
+            var element = document.getElementById('choices-category-edit');
+            const example = new Choices(element, {
+                searchEnabled: false
+            });
+        };
     </script>
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="./assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+    <script src="./assets/js/mainpro.min.js"></script>
 </body>
 
 </html>
